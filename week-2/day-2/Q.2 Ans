@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scan = new Scanner(System.in);
+        float w = scan.nextFloat();
+         if (w>=1 && w<=5)
+        {
+            System.out.println("Thanks");
+        }
+        else
+        {
+            System.out.println("Error: 101");
+        }
+    }
+}
