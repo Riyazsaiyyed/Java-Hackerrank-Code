@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+          float x,y,z;
+        Scanner scan = new Scanner(System.in);
+        x = scan.nextFloat();
+        y = scan.nextFloat();
+        z = scan.nextFloat();
+        float a = (x+y+z)/3;
+        double value = a;
+        int decimalpoint = 1;
+        value = value * Math.pow(10, decimalpoint);
+        value = Math.floor(value);
+        value = value / Math.pow(10, decimalpoint);
+        System.out.println(value);
+    }
+}
