@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Float blue = sc.nextFloat();
+        Float blue1= blue % blue.intValue(); 
+        int red  = sc.nextInt();
+        int black = sc.nextInt();
+        if(blue1 >= 0.01)
+        {
+            int blue2 = blue.byteValue()+1;
+            System.out.println(blue2+" "+red+" "+black);
+        }
+        else
+        {
+            System.out.println(blue.byteValue()+" "+red+" "+black);
+        }
+    }
+}
