@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+ Scanner scan = new Scanner(System.in);
+        int w = scan.nextInt();
+        if (w>0) {
+            float x = w;
+            System.out.println(x);
+        }
+        else
+        {
+
+            System.out.println("Invalid Input");
+        }
+           }
+}
