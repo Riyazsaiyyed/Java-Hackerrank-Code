@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    float balance = sc.nextFloat();
+    int choice = sc.nextInt();
+
+    if (choice == 1) {
+      float amount = sc.nextFloat();
+      balance -= amount;
+      System.out.printf("%.2f\n", balance);
+    } else if (choice == 2) {
+      float amount = sc.nextFloat();
+      balance += amount;
+      System.out.printf("%.2f\n", balance);
+    } else {
+      System.out.println("Error");
+    }
+  }
+}
