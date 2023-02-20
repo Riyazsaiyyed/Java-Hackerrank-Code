@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+import java.text.DecimalFormat;
+
+public class Solution {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    DecimalFormat df = new DecimalFormat("#.##");
+    
+    double borrowedAmount = sc.nextDouble();
+    double interest = borrowedAmount * 0.1;
+    double totalAmount = borrowedAmount + interest;
+    double emi = totalAmount / 12;
+    
+    System.out.println(df.format(totalAmount));
+    System.out.println(df.format(emi));
+  }
+}
