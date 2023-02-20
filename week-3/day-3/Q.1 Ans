@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int amount = sc.nextInt();
+        int remAmount = amount;
+        int num_five=0,num_hund=0;
+        if (remAmount >= 500)
+        {
+            num_five = remAmount / 500;
+            remAmount = remAmount % 500;
+        }
+        if (remAmount >= 100)
+        {
+            num_hund = remAmount / 100;
+            remAmount = remAmount % 100;
+        }
+        int result = (num_five*500 + num_hund*100);
+        if (result==amount)
+        {
+            System.out.println(num_hund+ " 100 Notes");
+            System.out.println(num_five+ " 500 Notes");
+        }
+        else
+        {
+            System.out.println("Invalid Input");
+        }
+    }
+}
