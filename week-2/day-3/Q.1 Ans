@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+         Scanner obj=new Scanner(System.in);
+         int ch=obj.nextInt();
+         double temper=obj.nextDouble();
+         double convertedTemper;
+         if(ch==1) 
+         {
+             convertedTemper=(temper-32)*5/9;
+             System.out.printf("%.2f",convertedTemper);
+         } 
+         else if(ch==2) 
+         {
+               convertedTemper=(temper*9/5)+32;
+               System.out.printf("%.1f",convertedTemper);
+         } 
+         else
+         {
+               System.out.println("INVALID CHOICE");
+         }        
+    }
+}
