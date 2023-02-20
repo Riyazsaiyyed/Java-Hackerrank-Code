@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int classe_Held=sc.nextInt();
+        int classe_Attended=sc.nextInt();
+        int attendancePercentage=(classe_Attended*100)/classe_Held;
+        System.out.println(attendancePercentage);
+        if (attendancePercentage<75) 
+        {
+            System.out.println("No");
+        } 
+        else
+        {
+            System.out.println("Yes");
+        }
+    }
+}
