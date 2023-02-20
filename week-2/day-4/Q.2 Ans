@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+import java.util.Scanner;
+
+public class Solution {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+      sc.next(); sc.next(); sc.next(); sc.next();
+    int w = sc.nextInt();
+
+    if (w >= 10 && w <= 99) {
+      int sum = w % 10 + w / 10;
+      int product = (w % 10) * (w / 10);
+
+      if (sum + product == w) {
+        System.out.println("Special two digit number");
+      } 
+        else 
+        {
+        System.out.println("Not a special two digit number");
+      }
+    } 
+      else 
+      {
+      System.out.println("Invalid Input");
+    }
+  }
+}
