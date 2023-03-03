@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] trees = new int[10];
+        for (int i = 0; i < 10; i++) {
+            trees[i] = sc.nextInt();
+        }
+        sortTrees(trees);
+        for (int tree : trees) {
+            System.out.print(tree + " ");
+        }
+    }
+    public static void sortTrees(int[] trees) {
+        boolean swapped = true;
+        int n = trees.length;
+        while (swapped) {
+            swapped = false;
+            for (int i = 0; i < n - 1; i++) {
+                if (trees[i] > trees[i + 1]) {
+                    int temp = trees[i];
+                    trees[i] = trees[i + 1];
+                    trees[i + 1] = temp;
+                    swapped = true;
+                }
+            }
+            n--;
+        }
+    }
+}
