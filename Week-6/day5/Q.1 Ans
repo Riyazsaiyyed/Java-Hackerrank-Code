@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+class Student {
+    String name;
+    int registrationNo;
+    void show(){
+        System.out.println(name+","+registrationNo);
+    }
+}
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int choice = sc.nextInt(); 
+        if(choice == 1){
+            Student s = new Student();
+            s.name = sc.next();
+            s.registrationNo = sc.nextInt();
+            while(s.registrationNo <= 0){
+                s.registrationNo = sc.nextInt();
+            }
+            s.show();
+        }
+        else if(choice == 2){
+            Student s = new Student();
+            s.show();
+        }
+		else{
+            System.out.println("Wrong Choice");
+        }
+    }
+}
