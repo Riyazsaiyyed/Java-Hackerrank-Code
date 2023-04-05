@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Outer_Calculator {
+    static class Inner_Calculator {
+        static int calculate(int num1, int num2, char operator) {
+            switch (operator) {
+                case '+': return num1 + num2;
+                case '-': return num1 - num2;
+                case '*': return num1 * num2;
+                case '/': return num1 / num2;
+                default: throw new IllegalArgumentException("invalid operator");
+            }
+        }
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int num1 = input.nextInt();
+        int num2 = input.nextInt();
+        char operator = input.next().charAt(0);
+
+        if (num1 <= 0 || num2 <= 0) {
+            System.out.println("invalid input");
+            return;
+        }
+        try {
+            int result = Inner_Calculator.calculate(num1, num2, operator);
+            System.out.println(result);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
