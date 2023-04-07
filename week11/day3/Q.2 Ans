@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String str1 = input.nextLine();
+        String str2 = input.nextLine();
+        if (str1.length() <= 2 || str2.length() <= 2) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        int[] count1 = new int[26];
+        int[] count2 = new int[26];
+        for (int i = 0; i < str1.length(); i++) {
+            count1[str1.charAt(i) - 'a']++;
+        }
+        for (int i = 0; i < str2.length(); i++) {
+            count2[str2.charAt(i) - 'a']++;
+        }
+        boolean isAnagram = true;
+        for (int i = 0; i < 26; i++) {
+            if (count1[i] != count2[i]) {
+                isAnagram = false;
+                break;
+            }
+        }
+        if (isAnagram) {
+            System.out.println("ANAGRAM");
+        } else {
+            System.out.println("NOT ANAGRAM");
+        }
+    }
+}
