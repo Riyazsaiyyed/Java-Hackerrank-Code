@@ -1,0 +1,16 @@
+import java.util.function.Predicate;
+
+public class Solution {
+    public static void main(String[] args) {
+        String str = "Lovely";
+        int n = 4;
+        Predicate<String> predicate = (s) -> s.length() > n;
+        if (n < 1) {
+            System.out.println("Invalid input");
+        } else if (predicate.test(str)) {
+            System.out.println("Valid string");
+        } else {
+            System.out.println("Invalid string");
+        }
+    }
+}
