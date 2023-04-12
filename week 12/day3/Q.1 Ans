@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+import java.util.function.Predicate;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> strings = new ArrayList<String>();
+    strings.add("Gang");
+    strings.add("Spring");
+    strings.add("Java");
+    strings.add("Live");
+    strings.add("Swing");
+
+    Predicate<String> endsWithG = s -> s.endsWith("g");
+    for (String string : strings) {
+      if (endsWithG.test(string)) {
+        System.out.println(string);
+      }
+    }
+  }
+}
